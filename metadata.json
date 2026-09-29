@@ -1,0 +1,6 @@
+{
+  "name": "AuditaMáq - Verificação de Divergências e Furos de Apontamento",
+  "description": "Sistema corporativo de auditoria de furos e divergências de horímetro e odômetro para controle de motomecanização e gestão de frota agrícola.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
