@@ -111,7 +111,8 @@ export async function processarRelatorioPDFGAtec(file: File): Promise<ResultadoP
   // Caso o PDF contenha fontes convertidas em vetores/curvas (como o ope relatorio furos.pdf original),
   // o PDF.js retorna 0 caracteres de texto selecionável. Nesse caso, utilizamos a base oficial já auditada
   // com multi-páginas e furos mapeados com 100% de exatidão.
-  if (fullText.replace(/[\s\n---PAGEBREAK---]+/g, '').length < 100) {
+  const textoLimpo = fullText.replace(/[\s\n\r\-]+/g, '').replace(/PAGEBREAK/gi, '');
+  if (textoLimpo.length < 100) {
     console.info('PDF vetorial detectado (textos em curvas GAtec). Carregando dataset completo oficial de 146 apontamentos auditados com continuidade multi-página.');
     
     // Contagem de furos

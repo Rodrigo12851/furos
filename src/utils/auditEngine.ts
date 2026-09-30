@@ -7,7 +7,7 @@ import {
   FiltrosAuditoria,
   TipoGap,
   ApontadorInfo 
-} from '../types';
+} from '../types/index.ts';
 
 /**
  * Normaliza número com tolerância para evitar erros de ponto flutuante em JS
